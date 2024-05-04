@@ -7,12 +7,8 @@
 
 
 #include <conio.h>
-void displayTriangle(char ch) {
-    system("cls");
-    int rows = ch - 'a' + 1;
-
-
-}
+int b,i,j,e;
+char input;
 int main()
 {
 	printf("╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═╬\n");
@@ -59,71 +55,43 @@ int main()
 		printf(" |_______________________|\n");
 		system("pause");            //按ENTER繼續作業 
 		char c;                     //將c設為字元變數   
-		c=getchar();                //字元輸入
+		c=getchar();  
+	loop1:
+	fflush(stdin);
 			printf("輸入壹個字元\n");
-			c=getchar();
-			if (c=='a'||c=='A'){    //c為0~9輸出digit 
-			char input;
+			scanf("%c",&b);
+			switch(b){   
+			case 65:
+			case 97:	
+		
 			system("cls");
 			printf("請輸入一個英文字"); 
-			
-			input=getchar();
-	
-				if (input<'a'||input>'n'){
-					printf("error\n");
-					
 
-//			else if (c=='b'||c=='B'){//c為a~z輸出lowercase 
-//				printf("Lowercase\n");
-////		}
-	//		else if (c=='c'||c=='C'){//c為A~Z輸出UPPERCASE 
-	//			printf("Uppercase\n");
-	//	}
-	//		else{                   //c為其他字符輸出自己的名字 
-	//		 	printf("E1B13陳思源\n");
-//		}
-			
-	}
-	else if
-	printf("%c",&input);
-
-	else {                          //密碼輸入不為2024將執行此情況 
-		printf("WARNING\n");         
-		printf("%c",'\a');
-		printf("輸入錯誤\n\a");
-
-		
-	return 0;
-	}
-
-
-}
-}
-}
-//我花了四天分批做完這個程式現在只覺得排版是最麻煩的部分 我只覺得好累 有些東西還是去網路上查的可能上課有教或許我忘了 
-//總之最麻煩的部分我覺得是排版 一堆符號出不來 一堆顏文字無法使用 差不多就這樣 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	loop2:
+	fflush(stdin);
+	scanf("%c",&input);
+    			if((input>=97)&&(input<=110))
+    			{
+					for(i=0;i<=input-97;i++){
+       	 				for(j=1;j<=input-97-i;j++){
+           				printf(" ");
+        				}
+        				for(e=0;e<=i;e++){
+           					printf("%c",input-e);
+        				}
+        				printf("\n");
+        			
+    				
+    			}
+					getch();
+    				system("CLS");
+    				goto loop1;
+				}else{
+    				printf("輸入的字元不在a-n之間，請重新輸入\n");
+    				goto loop2;
+				}
+				
+				break;
+        		}
+				}
+				}
