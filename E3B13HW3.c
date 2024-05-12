@@ -60,7 +60,78 @@ system("CLS");									//清除畫面
 	printf("d.系統結束\n");
 	scanf("%c",&b);
 
-						
+	switch(b){				
+	case 97:
+for(i=0;i<10;i++)
+{
+	srand((unsigned)time(NULL));		//隨機變數
+	c=rand()%9;
+	srand((unsigned)time(NULL));
+	d=rand()%9+i;
+	sit[c][d]=42;	
+					
+}
+printf("\\123456789\n");				//座位表
+	for(j=0;j<9;j++)
+		{
+			i--;
+			printf("%d",10-i);
+			for(l=0;l<9;l++)
+			{
+			printf("%c",sit[j][l]);
+			}
+			printf("\n");
+		}
+	system("pause");		
+	printf("e04");
+	break;			
+	case 98:
+		printf("請輸入需要位置數 最多四位");
+		scanf("%d",&k);
+	for(g=0;g<k;g++)
+{
+	srand((unsigned)time(NULL));		//隨機位置
+	c=rand()%9;
+	srand((unsigned)time(NULL));
+	d=rand()%9+g;
+	sit[c][d]=42;	
+					
+}
+printf("\\123456789\n");				//座位表
+	for(j=0;j<9;j++)
+		{
+			i--;
+			printf("%d",-i);
+			for(l=0;l<9;l++)
+			{
+			printf("%c",sit[j][l]);
+			}
+			printf("\n");
+		}	
+system("pause");
+printf("是否滿意 1是2否\n");
+case 49:
+{
+	break;
+}	
+case 50:
+	fflush(stdin);
+	system("pause");
+	system("cls");
+printf("請輸入需要位置數 最多四位");
+scanf("%d",&k);
+for(g=0;g<k;g++)
+{
+	srand((unsigned)time(NULL));		//隨機位置
+	c=rand()%9;
+	srand((unsigned)time(NULL));
+	d=rand()%9+g;
+	sit[c][d]=42;	
+	sit[c][d]='@'; 				
+}
+
+}
+					
 				
 	}
 
