@@ -129,15 +129,18 @@ for(g=0;g<k;g++)
 	sit[c][d]=42;	
 	sit[c][d]='@'; 				
 }
-
+printf("\\123456789\n");				//®y¦ìªí
+	for(j=0;j<9;j++)
+		{
+			i--;
+			printf("%d",-i);
+			for(l=0;l<9;l++)
+			{
+			printf("%c",sit[j][l]);
+			}
+			printf("\n");
+		}
 }
 					
 				
 	}
-
-
-	
-
-
-
-
