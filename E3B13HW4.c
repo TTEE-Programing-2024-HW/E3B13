@@ -148,3 +148,29 @@ printf("--------------------\n");
 			system("pause");
 			system("cls");
 			goto menu;
+		
+		case'C':																//搜尋學生成績 
+		case'c':
+			printf("搜尋學生成績\n");
+			printf("請輸入要搜尋的姓名：");										//搜尋的姓名
+			scanf("%s", &find);
+			for ( i = 0 ; i <= n ; i++ )										//搜尋 
+			{
+				if ( i==n && j!=1 )												//無資料提示 
+				{
+					printf("無該生資料！");
+					break;
+				}
+				if (!strcmp(find,stu[i].name))								//資料顯示 
+				{
+					printf("學生");
+					printf("---------------------------\n");
+					printf("姓名%s,學號%d,數學%d,物理%d,英文%d,平均%.2f\n",stu[i].name,stu[i].id,stu[i].math,stu[i].physics,stu[i].english,stu[i].avg);
+					printf("---------------------------\n");
+					j = 1;
+				}
+			} 
+			printf("回到主選單\n");
+			system("pause");
+			system("cls");
+			goto menu;
