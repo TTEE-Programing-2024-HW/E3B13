@@ -73,6 +73,19 @@ printf("--------------------\n");
 	scanf("%c", &ch);
 	system("cls");
 	
-
-
-
+		switch(ch)																
+	{
+		case'A':																//輸入成績 
+		case'a':
+			fflush(stdin);
+			printf("輸入學生成績\n");
+			printf("請輸入學生人數(5~10)：");
+			scanf("%d", &n);
+			while (n < 5||n > 10)												//檢測人數
+			{
+				printf("錯誤訊息，請重新輸入！\n");
+				printf("請輸入學生人數(5~10)：");
+				scanf("%d", &n);
+			}
+			system("cls");
+			printf("輸入學生成績\n");
