@@ -200,3 +200,35 @@ printf("--------------------\n");
 			system("pause");
 			system("cls");
 			goto menu;
+		
+		case'E':																//e. 系統結束 
+		case'e':
+			printf("確定y/n");											//要求使用者確認是否繼續 
+			fflush(stdin);
+			scanf("%c", &ch);
+			while(ch != 'Y' && ch != 'y' && ch != 'N' && ch != 'n')				//判斷是否為要求中的字元 
+			{
+				system("cls");
+				printf("錯誤訊息 請重新輸入\n");								//判斷為否要求重新輸入 
+				printf("請輸入一個字元");
+				scanf("%c", &ch);
+			}
+			
+			if(ch == 'Y' || ch == 'y')											//判斷使用者的選擇 
+				return 0;
+			else
+				goto menu;
+			return 0;
+			
+		default:																//重新輸入
+			printf("錯誤\n");
+			printf("back\n");
+			system("pause");
+			system("cls");
+			goto menu;
+	}
+	return 0;
+}
+//好累  
+
+
