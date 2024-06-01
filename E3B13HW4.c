@@ -174,3 +174,29 @@ printf("--------------------\n");
 			system("pause");
 			system("cls");
 			goto menu;
+		
+		case'D':																//成績排名 
+		case'd':
+			for( i=0 ; i<n ; i++ )												//比較平均大小並依大至小排列 
+			{
+				for( j=i+1 ; j<n ; j++ )
+				{
+					if( stu[i].avg < stu[j].avg )
+					{
+						k = bs[i];
+						bs[i] = bs[j];
+						bs[j] = k;
+					}
+				}
+			}
+ 
+			printf("--------------------------------\n");
+			for ( i=0 ; i<n ; i++ )												//顯示排列後的學生資料
+			{
+				printf("姓名%s,學號%d,數學%d,物理%d,英文%d,平均%.2f\n", stu[bs[i]].name, stu[bs[i]].id, stu[bs[i]].math, stu[bs[i]].physics, stu[bs[i]].english, stu[bs[i]].avg);
+			}
+			printf("--------------------------------\n");
+			printf("回到主選單\n");
+			system("pause");
+			system("cls");
+			goto menu;
