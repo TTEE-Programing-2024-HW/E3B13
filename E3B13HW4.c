@@ -134,3 +134,17 @@ printf("--------------------\n");
 			system("pause");
 			system("cls");
 			goto menu;
+
+		case'B':																//顯示學生成績 
+		case'b':
+			printf("學生成績\n");
+			printf("------------------------------------------------------------\n");
+			for ( i = 0 ; i < n ; i++ )
+			{
+				printf("姓名%s,學號%d,數學%d,物理%d,英文%d,平均%.2f\n", stu[i].name, stu[i].id, stu[i].math, stu[i].physics, stu[i].english, stu[i].avg);
+			}
+			printf("------------------------------------------------------------\n");
+			printf("回到主選單\n");
+			system("pause");
+			system("cls");
+			goto menu;
